@@ -1478,7 +1478,7 @@ extension ViewController {
             return OAuthSwiftOpenURLExternally.sharedInstance
         case .`internal`:
             if internalWebViewController.parent == nil {
-                self.addChild(internalWebViewController)
+				self.addChild(internalWebViewController)
             }
             return internalWebViewController
         case .safari:
