@@ -78,16 +78,16 @@ import Foundation
 struct Storyboards {
     struct Main {
         
-        static let identifier = OAuthStoryboard.Name("Storyboard")
-        static let formIdentifier = OAuthStoryboard.SceneIdentifier("Form")
-        static let formSegue = OAuthStoryboardSegue.Identifier("form")
+        static let identifier = "Storyboard"
+        static let formIdentifier = "Form"
+        static let formSegue = "form"
         
         static var storyboard: OAuthStoryboard {
             return OAuthStoryboard(name: self.identifier, bundle: nil)
         }
         
         static func instantiateForm() -> FormViewController {
-            return self.storyboard.instantiateController(withIdentifier: formIdentifier) as! FormViewController
+            return self.storyboard.instantiateController(withIdentifier: .init(formIdentifier)) as! FormViewController
         }
 
 
